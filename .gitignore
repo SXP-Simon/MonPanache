@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.DS_Store
+Thumbs.db
+# 本机实验、模型、数据库文件不纳入资料分支。
+local/

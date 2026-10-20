@@ -1,0 +1,334 @@
+{
+  "catalog_date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "source_label": "用户提供的转录文本汇总目录",
+  "preservation": "TXT/SRT copied without content modifications; ZIP not inspected or imported.",
+  "counts": {
+    "lectures": 20,
+    "txt": 20,
+    "srt": 20,
+    "files": 40
+  },
+  "files": [
+    {
+      "id": "T01",
+      "source_filename": "第六届OceanBase数据库大赛启动仪式-大赛介绍.txt",
+      "path": "materials/transcripts/txt/第六届OceanBase数据库大赛启动仪式-大赛介绍.txt",
+      "bytes": 33774,
+      "sha256": "1ec855b4fe877ddb61b5866694d3a55807ff4a1678b57df36ed9f66584bb7b68"
+    },
+    {
+      "id": "T01",
+      "source_filename": "第六届OceanBase数据库大赛启动仪式-大赛介绍.srt",
+      "path": "materials/transcripts/srt/第六届OceanBase数据库大赛启动仪式-大赛介绍.srt",
+      "bytes": 41740,
+      "sha256": "4928ede90506ab34843c7f0a325bdff84f7f2d623de9e9a8ab331414d776bd16",
+      "subtitle_cues": 231,
+      "subtitle_last_end": "00:35:16,156"
+    },
+    {
+      "id": "T02",
+      "source_filename": "第六届OceanBase数据库大赛启动仪式-开场致辞.txt",
+      "path": "materials/transcripts/txt/第六届OceanBase数据库大赛启动仪式-开场致辞.txt",
+      "bytes": 2782,
+      "sha256": "e5e63b909c71bfc6a5eeba5754185ed1dafe0fad0950cc921c72ed6af261a6b9"
+    },
+    {
+      "id": "T02",
+      "source_filename": "第六届OceanBase数据库大赛启动仪式-开场致辞.srt",
+      "path": "materials/transcripts/srt/第六届OceanBase数据库大赛启动仪式-开场致辞.srt",
+      "bytes": 23509,
+      "sha256": "bf57d5d200873e616d4e78b64b492d8f5c5726fa6fcafcd395e6495ffb77cf8f",
+      "subtitle_cues": 451,
+      "subtitle_last_end": "00:12:46,940"
+    },
+    {
+      "id": "T03",
+      "source_filename": "第六届OceanBase数据库大赛启动仪式-嘉宾致辞.txt",
+      "path": "materials/transcripts/txt/第六届OceanBase数据库大赛启动仪式-嘉宾致辞.txt",
+      "bytes": 1934,
+      "sha256": "4175a11e9c5b3f38d920997085be7bcc83786aed5ade7c7f10ac8db8be33d4d9"
+    },
+    {
+      "id": "T03",
+      "source_filename": "第六届OceanBase数据库大赛启动仪式-嘉宾致辞.srt",
+      "path": "materials/transcripts/srt/第六届OceanBase数据库大赛启动仪式-嘉宾致辞.srt",
+      "bytes": 16907,
+      "sha256": "df1d1744c9a7138c558ffed4225b63088440c652ed53f69a7e4ff62b20f08e96",
+      "subtitle_cues": 248,
+      "subtitle_last_end": "00:08:45,372"
+    },
+    {
+      "id": "T04",
+      "source_filename": "第六届OceanBase数据库大赛启动仪式-对话.txt",
+      "path": "materials/transcripts/txt/第六届OceanBase数据库大赛启动仪式-对话.txt",
+      "bytes": 2547,
+      "sha256": "4ea81c473f876181e29f8745f6717cf96d94873a48b698220f3d24bf464cde36"
+    },
+    {
+      "id": "T04",
+      "source_filename": "第六届OceanBase数据库大赛启动仪式-对话.srt",
+      "path": "materials/transcripts/srt/第六届OceanBase数据库大赛启动仪式-对话.srt",
+      "bytes": 44753,
+      "sha256": "4d0a08b9dd7b7dd33965e9127385f0d8b349ecdf24db36274cbfe7b9a48553ad",
+      "subtitle_cues": 720,
+      "subtitle_last_end": "00:23:50,972"
+    },
+    {
+      "id": "T05",
+      "source_filename": "OB AI原生数据库与 seekdb 基础.txt",
+      "path": "materials/transcripts/txt/OB AI原生数据库与 seekdb 基础.txt",
+      "bytes": 3306,
+      "sha256": "44168be783279320acf9bad50430fa94373c11d31caa966ecad0f76c7c017881"
+    },
+    {
+      "id": "T05",
+      "source_filename": "OB AI原生数据库与 seekdb 基础.srt",
+      "path": "materials/transcripts/srt/OB AI原生数据库与 seekdb 基础.srt",
+      "bytes": 45187,
+      "sha256": "334a0de2b028e8d38cc98e96d64430f31eaafdbaf59f2a2a52620984f22c11b6",
+      "subtitle_cues": 608,
+      "subtitle_last_end": "00:26:34,748"
+    },
+    {
+      "id": "T06",
+      "source_filename": "OB向量数据库与 RAG.txt",
+      "path": "materials/transcripts/txt/OB向量数据库与 RAG.txt",
+      "bytes": 2936,
+      "sha256": "f2699440c413fd06a6f9c93742d95c4186137602740fb6c55696a54ebdba69d2"
+    },
+    {
+      "id": "T06",
+      "source_filename": "OB向量数据库与 RAG.srt",
+      "path": "materials/transcripts/srt/OB向量数据库与 RAG.srt",
+      "bytes": 49194,
+      "sha256": "5f881b8cfee7c109dae202b30979403825763ef882f52c20b8d53edaca01ee06",
+      "subtitle_cues": 739,
+      "subtitle_last_end": "00:26:01,372"
+    },
+    {
+      "id": "T07",
+      "source_filename": "OB SQLxAl：AI Functions 的设计与执行.txt",
+      "path": "materials/transcripts/txt/OB SQLxAl：AI Functions 的设计与执行.txt",
+      "bytes": 7015,
+      "sha256": "7c4e755b6cf3d084aab70b361fdd63e1c39d7c6caacf0434676378ca7a59592d"
+    },
+    {
+      "id": "T07",
+      "source_filename": "OB SQLxAl：AI Functions 的设计与执行.srt",
+      "path": "materials/transcripts/srt/OB SQLxAl：AI Functions 的设计与执行.srt",
+      "bytes": 16330,
+      "sha256": "9f22f3f6c34e91e1e938ebd1d52ecab2d2a466c9cfaa3be5ebc46bc60aca211c",
+      "subtitle_cues": 115,
+      "subtitle_last_end": "00:15:03,552"
+    },
+    {
+      "id": "T08",
+      "source_filename": "OB File SQL for AI Agent.txt",
+      "path": "materials/transcripts/txt/OB File SQL for AI Agent.txt",
+      "bytes": 3366,
+      "sha256": "e86ec1571382f9befa6f7822914227e9b28f68d64d2397b507e64f3a89e2fcbb"
+    },
+    {
+      "id": "T08",
+      "source_filename": "OB File SQL for AI Agent.srt",
+      "path": "materials/transcripts/srt/OB File SQL for AI Agent.srt",
+      "bytes": 18853,
+      "sha256": "3e9cbc2ed3a25eee8460dcf97d677b9bc55b255d8fcfb212a0a9605ede733703",
+      "subtitle_cues": 94,
+      "subtitle_last_end": "00:18:23,744"
+    },
+    {
+      "id": "T09",
+      "source_filename": "OBAI列模型驱动派生数据的自动维护.txt",
+      "path": "materials/transcripts/txt/OBAI列模型驱动派生数据的自动维护.txt",
+      "bytes": 2446,
+      "sha256": "9ed98f00f786ebe328fa5f0e6bb4cd7368d9f70870eca4fb2b65258fc84cc1ec"
+    },
+    {
+      "id": "T09",
+      "source_filename": "OBAI列模型驱动派生数据的自动维护.srt",
+      "path": "materials/transcripts/srt/OBAI列模型驱动派生数据的自动维护.srt",
+      "bytes": 21959,
+      "sha256": "e03db2f775e91e248ccaa7fdc2afdb9de1e5ed25bb41c247e9ad9d0201aa0ec8",
+      "subtitle_cues": 230,
+      "subtitle_last_end": "00:16:40,508"
+    },
+    {
+      "id": "T10",
+      "source_filename": "OBPowerContext介绍和安装使用.txt",
+      "path": "materials/transcripts/txt/OBPowerContext介绍和安装使用.txt",
+      "bytes": 37705,
+      "sha256": "76f7b5e2bc5b87723033a7189398945e88aecb98387c69fbd6a5a1033240e114"
+    },
+    {
+      "id": "T10",
+      "source_filename": "OBPowerContext介绍和安装使用.srt",
+      "path": "materials/transcripts/srt/OBPowerContext介绍和安装使用.srt",
+      "bytes": 70656,
+      "sha256": "de69f83fd0f0237714751e28e35dec58f41beb3db80a9a728933f48b75e57290",
+      "subtitle_cues": 927,
+      "subtitle_last_end": "00:48:57,692"
+    },
+    {
+      "id": "T11",
+      "source_filename": "OB PowerContext 架构解读及实践.txt",
+      "path": "materials/transcripts/txt/OB PowerContext 架构解读及实践.txt",
+      "bytes": 31228,
+      "sha256": "340a3933b08d7225d587cdde914630a05e5f8bfdd5ebe74ea9706275e74d0b73"
+    },
+    {
+      "id": "T11",
+      "source_filename": "OB PowerContext 架构解读及实践.srt",
+      "path": "materials/transcripts/srt/OB PowerContext 架构解读及实践.srt",
+      "bytes": 58621,
+      "sha256": "742ce5f6a077f0057d16cdcfd07a09df11b31e3b882cbaeecd6625c2204629d8",
+      "subtitle_cues": 814,
+      "subtitle_last_end": "00:32:15,836"
+    },
+    {
+      "id": "T12",
+      "source_filename": "OB具体的场景拆解如何应用PowerContext.txt",
+      "path": "materials/transcripts/txt/OB具体的场景拆解如何应用PowerContext.txt",
+      "bytes": 36473,
+      "sha256": "62b074e28f227c36b91d8b9a7d50ad17d329773e021840023484d493a76a9cec"
+    },
+    {
+      "id": "T12",
+      "source_filename": "OB具体的场景拆解如何应用PowerContext.srt",
+      "path": "materials/transcripts/srt/OB具体的场景拆解如何应用PowerContext.srt",
+      "bytes": 90008,
+      "sha256": "a6d070dd4203e8733e6530b986142ff67e3d406b4c15dbf74118c96191c2e805",
+      "subtitle_cues": 1336,
+      "subtitle_last_end": "00:56:06,268"
+    },
+    {
+      "id": "T13",
+      "source_filename": "OB AMD赛题方向解析.txt",
+      "path": "materials/transcripts/txt/OB AMD赛题方向解析.txt",
+      "bytes": 9381,
+      "sha256": "04ccac5a7286ce0b58f6f006008e8e55741fd91f21755635533fcdaab000d2c5"
+    },
+    {
+      "id": "T13",
+      "source_filename": "OB AMD赛题方向解析.srt",
+      "path": "materials/transcripts/srt/OB AMD赛题方向解析.srt",
+      "bytes": 37584,
+      "sha256": "b3465eeee3d300e44046faedf0d57bed981ec71aa3dd4ba9c0cf16a2defb9026",
+      "subtitle_cues": 686,
+      "subtitle_last_end": "00:22:29,756"
+    },
+    {
+      "id": "T14",
+      "source_filename": "OB阶跃星辰赛题方向解析.txt",
+      "path": "materials/transcripts/txt/OB阶跃星辰赛题方向解析.txt",
+      "bytes": 4555,
+      "sha256": "2683a2e4b35440e3b3d9b1606313d198f4636f4b517e1806315a51edb4741a05"
+    },
+    {
+      "id": "T14",
+      "source_filename": "OB阶跃星辰赛题方向解析.srt",
+      "path": "materials/transcripts/srt/OB阶跃星辰赛题方向解析.srt",
+      "bytes": 16384,
+      "sha256": "4ceb670d1d058aacd5ce1dd2f08b56ec4a7de702688a1e847e687653258bdcf9",
+      "subtitle_cues": 54,
+      "subtitle_last_end": "00:16:46,400"
+    },
+    {
+      "id": "T15",
+      "source_filename": "OB高德赛题方向解析.txt",
+      "path": "materials/transcripts/txt/OB高德赛题方向解析.txt",
+      "bytes": 3313,
+      "sha256": "a7796ce0f825979111722fe83e1883dfee306ad545357191eafbaf71f6d3325c"
+    },
+    {
+      "id": "T15",
+      "source_filename": "OB高德赛题方向解析.srt",
+      "path": "materials/transcripts/srt/OB高德赛题方向解析.srt",
+      "bytes": 27704,
+      "sha256": "d0a2c90ff14b96d6dfa47523d21801a7413d513de1d3828db2c82a47473a03b6",
+      "subtitle_cues": 451,
+      "subtitle_last_end": "00:17:21,916"
+    },
+    {
+      "id": "T16",
+      "source_filename": "OB Dify赛题方向解析.txt",
+      "path": "materials/transcripts/txt/OB Dify赛题方向解析.txt",
+      "bytes": 12720,
+      "sha256": "70b452cb1c4ac92466d5b3a6b7741ec1cc6e260cba906192b046f6f25dbcfcb7"
+    },
+    {
+      "id": "T16",
+      "source_filename": "OB Dify赛题方向解析.srt",
+      "path": "materials/transcripts/srt/OB Dify赛题方向解析.srt",
+      "bytes": 30045,
+      "sha256": "c331f5fc72cd0c56d3c1291ccf763e8cf2dc61ac821bc200c2df115717816874",
+      "subtitle_cues": 391,
+      "subtitle_last_end": "00:19:42,172"
+    },
+    {
+      "id": "T17",
+      "source_filename": "OB原力灵机赛题方向解析.txt",
+      "path": "materials/transcripts/txt/OB原力灵机赛题方向解析.txt",
+      "bytes": 6371,
+      "sha256": "a064697e91a50dd211284cf473dee64c59c9a1747a340a9b9f5b6abd66dcb460"
+    },
+    {
+      "id": "T17",
+      "source_filename": "OB原力灵机赛题方向解析.srt",
+      "path": "materials/transcripts/srt/OB原力灵机赛题方向解析.srt",
+      "bytes": 30446,
+      "sha256": "7466eb99e2b44f63c9b98c31ce8125fc2c402ab7754e79a3bce16bf49eeb4514",
+      "subtitle_cues": 451,
+      "subtitle_last_end": "00:20:49,372"
+    },
+    {
+      "id": "T18",
+      "source_filename": "OB Qoder赛题方向解析.txt",
+      "path": "materials/transcripts/txt/OB Qoder赛题方向解析.txt",
+      "bytes": 39594,
+      "sha256": "880455a4488b4372b76e28e23b66511afb95c3d2589d6a619ba2d7f6a8ffc0a0"
+    },
+    {
+      "id": "T18",
+      "source_filename": "OB Qoder赛题方向解析.srt",
+      "path": "materials/transcripts/srt/OB Qoder赛题方向解析.srt",
+      "bytes": 84666,
+      "sha256": "b6ffd34ddd2dae301389ebae8d8a8246259704862175f321bad922f2bc2dc143",
+      "subtitle_cues": 1310,
+      "subtitle_last_end": "00:46:12,476"
+    },
+    {
+      "id": "T19",
+      "source_filename": "OB魔搭介绍赛题.txt",
+      "path": "materials/transcripts/txt/OB魔搭介绍赛题.txt",
+      "bytes": 4375,
+      "sha256": "da1ddbc766403a55d46f35c56e98766863947f008bc063058ab0c8b3654a2bb5"
+    },
+    {
+      "id": "T19",
+      "source_filename": "OB魔搭介绍赛题.srt",
+      "path": "materials/transcripts/srt/OB魔搭介绍赛题.srt",
+      "bytes": 8773,
+      "sha256": "127d418d4b7bbff514fab4e65b2d9161f79cfde8df36f2c1a7a6ac5720921842",
+      "subtitle_cues": 112,
+      "subtitle_last_end": "00:06:01,020"
+    },
+    {
+      "id": "T20",
+      "source_filename": "OB MiniMax 赛题方向解析.txt",
+      "path": "materials/transcripts/txt/OB MiniMax 赛题方向解析.txt",
+      "bytes": 7561,
+      "sha256": "6cf0ae6926b07f7382fdfa7cdac2022a9d0b6550ef9e42cc843e1ad053c9e8f3"
+    },
+    {
+      "id": "T20",
+      "source_filename": "OB MiniMax 赛题方向解析.srt",
+      "path": "materials/transcripts/srt/OB MiniMax 赛题方向解析.srt",
+      "bytes": 26666,
+      "sha256": "3cd311e127d50797005ec243f4123cebc7018c65780d72e1ce8cdd6ff908d3b8",
+      "subtitle_cues": 327,
+      "subtitle_last_end": "00:17:32,028"
+    }
+  ]
+}

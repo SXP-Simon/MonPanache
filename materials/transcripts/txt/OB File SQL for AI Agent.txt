@@ -1,0 +1,55 @@
+哈喽大家晚上好！我是 OceanBase 的开源研发工程师王泽霖。这是我们第六届 OceanBase 数据库大赛的训练营第四讲，这次主要分享一个和我们这次数据库大赛 SeekDB 题目非常相关的一个 Feature——文件级数据库（File SQL for AI Agent）。
+
+这次分享主要分两个部分：
+1. 文件级数据库（File SQL）的基本介绍与技术架构；
+2. 这次大赛相关题目的主要内容。
+
+第一部分：文件级数据库（File SQL）
+我写了一个简单的 Slogan：“让数据库认识文件”。让数据库认识文件，不需要过多的操作，这就是它非常核心的观点。
+
+Agent 的文件操作：
+传统数据库通常用 `LOAD DATA` 导入文件（如 CSV 文件），需要五步：
+1. 推断 Schema；
+2. 建表；
+3. 通过 INSERT / Batch INSERT 导入数据；
+4. 查询数据；
+5. 如果需要清理数据，还要执行相应的 DROP/DELETE SQL。
+
+对于人来说这只是操作麻烦，但对于 Agent 来说会引入很多工程问题：
+- 重试机制：Agent 的特点是多次重试，没有冗余操作时多次插入会导致数据混乱；
+- 失败率：强行硬导入容易失败；
+- 冗余副本：文件更新了但数据库表没变，产生增量更新和一致性问题；
+- 时效性：硬导入数据会大大增加 Agent 响应的时延。
+
+因此应运而生了 File SQL 这种轻量化模式：一条 SQL，零导入，不建持久化表，而是生成临时表状态，降低 Agent 失败率并提升处理效率。
+
+三类主要技术路线：
+1. SQL 直写路径（DuckDB, ClickHouse, Apache DataFusion 等）：以 DuckDB 为例，支持 `read_csv`, `read_parquet`, `read_json` 等函数，支持 `glob`, `describe`, `copy to`；
+2. 会话级注册（如 Apache DataFusion 执行 `CREATE EXTERNAL TABLE` 注册到 Catalog）；
+3. 共享存储（如 Trino，更适合数据湖治理，不适合 Agent 即时场景）。
+SeekDB 的选择是公开的 SQL 直写体验参考 DuckDB，但底层由 SeekDB 原生执行引擎支持。
+
+常用 SQL 语法示例：
+- `SELECT * FROM glob('dir/*')`：查看目录下文件；
+- `DESCRIBE SELECT * FROM read_csv('data.csv')`：查看 CSV Schema；
+- `SELECT ... FROM read_csv('data.csv') GROUP BY ...`：读取并聚合；
+- 多文件关联查询（CSV 与 Parquet JOIN）；
+- `COPY (SELECT * FROM read_csv('orders.csv')) TO 'output.csv'`：导出。
+
+原生执行与代码边界：
+- Parser：解析 `read_csv`、`glob`、`read_parquet` 等算子为 `FileScan` 逻辑算子；
+- Resolver：推断 Schema，进行路径安全校验（白名单、只读限制、防越界访问）；
+- Optimizer：生成执行计划，与 Filter、JOIN、聚合算子融合；
+- FileScan 物理算子：打开文件、按格式解析推导类型，交还给 SeekDB 关系执行引擎。
+
+第二部分：出题方向与题目内容
+为什么会出 File SQL 题目？
+1. 这是 SeekDB 正在研发的核心 Feature，上手友好且适合在大赛中作为考题；
+2. Agent 非常需要这个 Feature。
+
+出题主要包含：
+- 单测（GTest 验证 Parser, Resolver, Schema 推导）与 MySQL Test（端到端测试）；
+- 全面覆盖 CSV、JSON、Parquet 文件格式；
+- 语法支持与双文件 JOIN 操作。
+
+欢迎大家报名 2026 OceanBase 数据库大赛并完成 File SQL 题目的实现！谢谢大家！

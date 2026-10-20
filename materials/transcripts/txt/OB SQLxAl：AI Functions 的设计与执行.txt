@@ -1,0 +1,51 @@
+哈喽，大家晚上好！我是 OceanBase 的开源研发工程师王泽霖。这是我们第六届 OceanBase 数据库大赛的训练营第三讲，这一讲主要是 AI 函数。
+
+其实 AI 函数是 AI 数据库最重要的功能之一，基本上如果对外分享 AI 数据库的话，AI 函数基本是逃不掉的。比如说我们前两讲应该或多或少都会提到 AI 函数这一块：第一讲我们讲的是 SeekDB 的基本架构与基础的一些介绍，AI 函数肯定是逃不掉的；第二讲应该是讲了向量数据库和 RAG，除了向量数据库这块会讲一些向量算法、索引算法、近邻和召回算法外，RAG 部分应该也是会讲到 AI 函数的，比如前面 AI Embedding 或者全文混搜的 AI Rerank，应该都会讲到一些。
+
+这次我们主要分两个 Part：一个是讲一下 AI 函数本身，第二个是讲一下我们这次 SeekDB 相关的几个 AI 函数的题目。
+
+第一部分 AI 函数，这里我用了一个简单的标语（Slogan）来做简单的总结，就是“数据库也要用大模型”。其实这个挺好理解的，就像我们现在人在 Agent 时代，比如说我前写代码经常就是用 Codex 或者 Claude Code 来回使用来编写代码。其实数据库也是需要这种大模型能力的。当然很多外部应用、使用数据库本身其实也会使用数据库和大模型这种联合的能力。比如说 RAG 服务，其实就很希望在数据库中的文本数据去向量化，然后再进行一次精排召回，其实能更好地达到准确度的要求。所以这种抽象化的 SQL 表达式，就是一种很好的一种接口，让数据库也能调用大模型能力；当然它其实也是让应用提供了一种 SQL 接口的能力，主动让数据库的数据和大模型进行结合。
+
+这里讲一下 SeekDB 主要的三个 AI 函数，分别是：
+- `AI_EMBEDDING`：代表向量生成；
+- `AI_RERANK`：代表候选精排；
+- `AI_COMPLETE`：代表生成补全。
+
+这里讲一下 AI 函数的一生。其实这里和 SQL 函数的一生有点像，从最开始应用来执行 SQL，然后最终调用大模型相应的能力。从左到右依次是：
+1. 应用与 SQL：基本上是由外部的应用、Agent、RAG 和业务应用，通过 MySQL 协议或者是通过 SDK 的模式接入 SQL 这块；
+2. 接下来走 Parser 和 Resolver，来解析出相应的 AI 函数的表达式（比如 Embedding、Rerank 和 Complete），然后做静态检查、参数个数的检查，把这些表达式变成执行的执行部分，去触发外部的调用；
+3. 接下来是模型与端点的管理，主要是检查当前用户是否具有 AI 模式（AI Model）的 Accessible 权限；其次按相应的逻辑模型解析成唯一的端点（Endpoint），获得相应的 URL、Provider 访问凭证（Credentials）、Request Model Name 等；
+4. Provider 适配器会生成相应的认证头和 JSON 请求体。它会根据不同的 AI 协议类型解析成统一的调用接口，比如 OpenAI、ModelScope、百炼等不同接口，统一协议接口；
+5. 接下来通过 libcurl 走 HTTP 客户端的形式发送 HTTP POST 请求，同时处理 HTTP 超时或错误结果，解析 HTTP Response；
+6. 最终调用外部的大模型服务（Embedding、Rerank、Complete）；
+7. 最终会有一份统一的结果：Embedding 生成向量数组，Complete 解析成文本，Rerank 解析成 JSON，回到 SQL 上下文中继续接下来的 SQL 流程。
+
+这里有一份 AI 函数的组成，基本上分为：
+- SQL Layer：加上 Model Configuration 的配置（如 AI Mode、Endpoint）；
+- Provider Adapter：根据 OpenAI、ModelScope、百炼等统一接口；
+- HTTP Layer：进行 cURL 处理并调用外部 External Model Service，返回相应结果。
+
+这里讲一下 `AI_EMBEDDING`：
+其实基本上就是文本向量化。输入基本上就是三个参数：模型、内容和维度。接下来会做参数求值、非空校验、正整数维度等检查，校验 Model Access 权限，解析为唯一端点并构造 JSON 包，libcurl 同步 POST。走 OpenAI 协议的话，主要输入是 model 和 input，dimension 写到请求体顶层，最后解析 `data[0].embedding`；走 ModelScope 协议的话，是 model 和 input text，dimension 写到 parameter，解析 `output.embeddings[0]`，最后把生成的序列化向量数组转换成 VARCHAR 格式返回给 SQL。
+AI 函数使用起来其实很简单，就两步：第一步注册填写模型信息，第二步使用相应的 AI 函数。
+
+这里讲一下 `AI_RERANK`：
+AI Rerank 就是从候选召回到精排，在 RAG 模式中会有比较好的应用。它比较适合放在向量检索或全文检索之后，对几十或几百条候选进行精排。因为它需要精排能力，所以不适合对全表进行排序。
+`AI_RERANK` 的输入是 Model、Query、Document，或者数组列的 Documents。这里会校验 JSON 数组与原生类型，检查 Model Access，返回带 Index 的 Result 和相关度分数。这里有两种输入途径：
+- 传入字符串：系统每 20 条进行一次批调用，修正每批结果的下标，根据 Relevance Score 做全局归并处理；
+- 传入对象数组（Documents）：系统抽取指定文本字段调用，把 Model Score 添加回原始对象并返回 JSON。
+
+最后是 `AI_COMPLETE`：
+从 Prompt 到生成结果。`AI_COMPLETE` 就是把 SQL 中已经组织好的上下文发送给模型，生成文本并返回到数据链路。输入为 Model、Prompt 和 Config，解析 Prompt 和 Config JSON，校验 Model 权限，返回首选的 Choice 文本。它同样支持 OpenAI、ModelScope 等不同协议，返回 LongText 数据类型。它偏单次处理，很难跨批次或多轮对话，因此适合摘要、数据抽取、数据分类或基于既有证据的问答。
+
+第二部分讲一下 AI 函数的出题方向：
+对 Agent 来说，AI 函数是一个非常简单的出题方向，我给了一个 Slogan 叫“填空题”，跟之前的 MiniOB 有点像。如果大家参加过之前的数据库大赛，前半部分基本在 MiniOB 上答题。MiniOB 是从 OceanBase 存储引擎出发，把 SQL 层的算子抽空让大家填空，考察传统数据库能力。
+这次比赛 AI 函数就是一个很好的简单题目的出题方向，归类为填空题，对 AI 函数做不同方向上的增强能力。当然企业题目也会有新增 AI 函数的需求。
+AI 函数增强（SeekDB 相关题目）大致有 6 个题目，分为 3 个梯次（从简单到中度到稍难），代表了 AI 函数增强的填空题方向：
+- 类型的增加、数据的表示；
+- 协议上的扩展；
+- 结果正确性与错误处理；
+- 稍难一点的：单次执行改成批量执行的优化；
+核心方向包括易用性、兼容性、稳定性、正确性和执行效率。
+
+欢迎大家先通过 AI 函数增强方向的题目来拿分，欢迎大家报名 2026 年 OceanBase 数据库大赛！谢谢大家！

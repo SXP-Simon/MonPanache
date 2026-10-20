@@ -1,0 +1,50 @@
+哈喽，大家七夕晚上好！祝大家七夕快乐！我是 OceanBase 的开源研发工程师王泽霖。这次是我们第六届 OceanBase 数据库大赛训练营系列的第一讲：AI 原生数据库与 SeekDB 基础。
+
+这次演讲主要内容包括：
+1. SeekDB 的由来；
+2. SeekDB 的主要架构；
+3. SeekDB 的主要业务方向；
+4. 这次大赛中与 SeekDB 相关的赛题部分。
+
+第一部分：SeekDB 的由来（AI 时代为什么还需要数据库？）
+时代变了，OceanBase 必须进行创新。经过多次头脑风暴，确定了两个演进方向：
+- 往大了做：面向企业级大数据的 AI 湖库一体（OceanBase 湖库），存算分离，赋能企业大模型与能效提升；
+- 往小了做：面向 Agent 时代的轻量化嵌入式数据库——SeekDB。
+
+Agent 时代的生活变化：现在大量开发工作由 Agent 完成。Agent 的三大基础（RAG、Memory 记忆、Skill/MCP 工具）都与数据息息相关：
+- RAG：效果取决于知识库质量与检索精准召回策略；
+- MCP：取决于接口标准化；
+- Memory：取决于记忆提取与精准召回；
+- Skill：取决于结构化与召回能力。
+因此，SeekDB 提供统一的多模数据层，支持混合搜索，大幅降低 Agent 使用数据的门槛与成本。
+
+SeekDB 的技术核心——LSM-Tree 架构继承：
+SeekDB 继承了 OceanBase 的 LSM-Tree 存储引擎核心能力，具有“写得快、读得慢（通过缓存优化）”的典型特征。
+通过 MemTable 内存写入、Redo Log 保证持久性、二层 HNSW 索引（Delta 与 Snapshot）快速存入向量数据，方便 Agent 快速 Query。
+从 OceanBase（商业代码 99.9% 开源）精简而来，通过代码裁剪从 600 万行精简到 200 万行：
+- 二进制体积压缩至 <50MB；
+- 空载 CPU 占用 <0.01 核，空载内存 <250MB；
+- 冷启动时间 <5 秒。
+
+SeekDB 架构体系：
+1. 高度兼容 MySQL 协议；
+2. AI 原生能力：向量化引擎、AI SQL 函数（`AI_EMBEDDING`, `AI_RERANK`, `AI_COMPLETE`）；
+3. 轻量化与跨平台：原生支持 Linux (x86/ARM64)、macOS (Apple Silicon M系列)、Windows (x86_64)；
+4. 多形态部署：既支持传统 Server 服务模式，又支持类似 SQLite 的嵌入式（Embedded）模式。
+
+LSM-Tree 内部读写与多模支持：
+- 写入流程：DML -> 事务写入 Active MemTable -> Frozen MemTable -> Mini Compaction -> SSTable -> Major Compaction 基线合并；
+- 统一多模数据模型：关系型数据、向量数据（Vector）、全文文本（Fulltext BM25）、JSON 半结构化、GIS 空间地理数据；
+- 混合检索：单条 SQL 实现向量语义 Top-K + 标量属性过滤 + 全文关键字检索 + AI Rerank 重新排序。
+
+特色功能——Fork / Diff / Merge（沙箱与分支合并）：
+专为 Agent 试错与重试机制设计：
+- Fork：创建数据沙箱分支；
+- Diff：检测分支间的数据差异与冲突；
+- Merge：根据冲突策略（Fail, Theirs, Ours）完成合并。
+避免 Agent 错误操作污染主数据，支持多 Agent 并发与重试。
+
+关于赛题：
+预赛共 30 道题目，其中 SeekDB 占 11 题，围绕内核功能增强、性能优化、AI 函数与新 Feature 编写展開。
+
+欢迎大家报名 2026 OceanBase 数据库大赛！谢谢大家！

@@ -1,0 +1,5 @@
+* text=auto
+*.md text eol=lf
+*.json text eol=lf
+# 保留用户提供的转录材料的原始字节，便于校验来源。
+materials/transcripts/** -text
