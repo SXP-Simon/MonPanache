@@ -1,0 +1,41 @@
+{
+  "template_only": true,
+  "status": "not_run",
+  "experiment_id": null,
+  "official_task_id": null,
+  "hypothesis": null,
+  "baseline_commit": null,
+  "candidate_commit": null,
+  "environment": {
+    "os": null,
+    "cpu": null,
+    "ram_gib": null,
+    "gpu": null,
+    "toolchain": null,
+    "dependency_lock_sha256": null,
+    "model_versions_and_parameters": null
+  },
+  "dataset": {
+    "name": null,
+    "version_or_sha256": null,
+    "split_policy": null,
+    "query_count": null,
+    "random_seeds": []
+  },
+  "protocol": {
+    "changed_variables": [],
+    "quality_gates": {},
+    "warmup": null,
+    "cache_state": null,
+    "concurrency_and_arrival_rate": null,
+    "repetitions": null,
+    "timeout_policy": null,
+    "measurement_boundaries": null
+  },
+  "commands": [],
+  "results": [],
+  "failures_and_exclusions": [],
+  "raw_result_paths": [],
+  "conclusion": null,
+  "limitations": []
+}

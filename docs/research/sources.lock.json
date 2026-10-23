@@ -1,0 +1,321 @@
+{
+  "schema_version": 1,
+  "accessed_on": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "purpose": "Research evidence snapshot; not an official task specification or runtime dependency lock",
+  "repositories": [
+    {
+      "repository": "https://github.com/oceanbase/seekdb",
+      "branch": "2026-competition",
+      "commit": "76f871eb5a84b664d487b03b3412ce50194135b5",
+      "commit_author_date": "2026-10-14T08:36:31Z",
+      "git_tree_sha": "1f4fb9dd8a20c66609077e78b434061d31fd48a4",
+      "tree_entry_count": 9841,
+      "designated_submission_baseline_confirmed": false
+    },
+    {
+      "repository": "https://github.com/oceanbase/powercontext",
+      "branch": "2026-competition",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "commit_author_date": "2026-09-29T15:09:51Z",
+      "git_tree_sha": "12db315f070437ff7acc7cc3af9b7a48bd5d58ed",
+      "tree_entry_count": 2201,
+      "designated_submission_baseline_confirmed": false
+    },
+    {
+      "repository": "https://github.com/oceanbase/powercontext",
+      "branch": "2026-competition-ecosystem",
+      "commit": "d647275c308e09b7b623f322a26f5c4e85734fb0",
+      "commit_author_date": "2026-10-23T07:36:03Z",
+      "git_tree_sha": "4ab7c84938da5ca04814fb022bf1b965d6504fd9",
+      "tree_entry_count": 10,
+      "designated_submission_baseline_confirmed": false
+    }
+  ],
+  "source_files": [
+    {
+      "repository": "seekdb",
+      "commit": "76f871eb5a84b664d487b03b3412ce50194135b5",
+      "path": "docs/developer-guide/zh/README.md",
+      "url": "https://github.com/oceanbase/seekdb/blob/76f871eb5a84b664d487b03b3412ce50194135b5/docs/developer-guide/zh/README.md",
+      "bytes": 2082,
+      "sha256": "32425b2f05e61f5c2d192661b1a112525be16a7c277977f403f742f916271a2e",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "seekdb",
+      "commit": "76f871eb5a84b664d487b03b3412ce50194135b5",
+      "path": "docs/developer-guide/zh/toolchain.md",
+      "url": "https://github.com/oceanbase/seekdb/blob/76f871eb5a84b664d487b03b3412ce50194135b5/docs/developer-guide/zh/toolchain.md",
+      "bytes": 5813,
+      "sha256": "ee18c0b8bc26e9bebc204ee59eebfbeee21ba8274a772b807e7196d7ff76c273",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "seekdb",
+      "commit": "76f871eb5a84b664d487b03b3412ce50194135b5",
+      "path": "src/observer/vector_index/ob_vector_index_param.cpp",
+      "url": "https://github.com/oceanbase/seekdb/blob/76f871eb5a84b664d487b03b3412ce50194135b5/src/observer/vector_index/ob_vector_index_param.cpp",
+      "bytes": 1230,
+      "sha256": "a0178438ec9bdffff69d663229e0426a460202382a5a492b51e8daf5b35bf8fa",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "seekdb",
+      "commit": "76f871eb5a84b664d487b03b3412ce50194135b5",
+      "path": "src/sql/engine/expr/ob_expr_ai/ob_ai_func.cpp",
+      "url": "https://github.com/oceanbase/seekdb/blob/76f871eb5a84b664d487b03b3412ce50194135b5/src/sql/engine/expr/ob_expr_ai/ob_ai_func.cpp",
+      "bytes": 2298,
+      "sha256": "f0ec5e36fa780bde65de0b8e97e4b2bd4dcfeb0451702e67c51504e74bb6236c",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "seekdb",
+      "commit": "76f871eb5a84b664d487b03b3412ce50194135b5",
+      "path": "src/sql/engine/expr/ob_expr_ai/ob_ai_func_client.cpp",
+      "url": "https://github.com/oceanbase/seekdb/blob/76f871eb5a84b664d487b03b3412ce50194135b5/src/sql/engine/expr/ob_expr_ai/ob_ai_func_client.cpp",
+      "bytes": 16017,
+      "sha256": "781df412431a3e4a6f6668d3e8a9a7df99d9f192b886b86ff58cc6e39b025c18",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "seekdb",
+      "commit": "76f871eb5a84b664d487b03b3412ce50194135b5",
+      "path": "src/sql/engine/expr/ob_expr_ai/ob_ai_func_utils.cpp",
+      "url": "https://github.com/oceanbase/seekdb/blob/76f871eb5a84b664d487b03b3412ce50194135b5/src/sql/engine/expr/ob_expr_ai/ob_ai_func_utils.cpp",
+      "bytes": 68920,
+      "sha256": "f02745e9ea54c23525ffaf8c944d9a2c904244eb98601dbaa4c4fbeb53daaf2e",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "seekdb",
+      "commit": "76f871eb5a84b664d487b03b3412ce50194135b5",
+      "path": "src/sql/engine/expr/ob_expr_ai/ob_expr_ai_complete.cpp",
+      "url": "https://github.com/oceanbase/seekdb/blob/76f871eb5a84b664d487b03b3412ce50194135b5/src/sql/engine/expr/ob_expr_ai/ob_expr_ai_complete.cpp",
+      "bytes": 8581,
+      "sha256": "67d996ff7e2e53ebe4f72b948197897daaf47d7da0a125b0120bcb5cd9db92bc",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "seekdb",
+      "commit": "76f871eb5a84b664d487b03b3412ce50194135b5",
+      "path": "src/sql/engine/expr/ob_expr_ai/ob_expr_ai_embed.cpp",
+      "url": "https://github.com/oceanbase/seekdb/blob/76f871eb5a84b664d487b03b3412ce50194135b5/src/sql/engine/expr/ob_expr_ai/ob_expr_ai_embed.cpp",
+      "bytes": 7032,
+      "sha256": "413bae66f7f614603e8071a75728c6345e402627bf022c19a63426f38b3c9fb3",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "seekdb",
+      "commit": "76f871eb5a84b664d487b03b3412ce50194135b5",
+      "path": "src/sql/engine/expr/ob_expr_ai/ob_expr_ai_rerank.cpp",
+      "url": "https://github.com/oceanbase/seekdb/blob/76f871eb5a84b664d487b03b3412ce50194135b5/src/sql/engine/expr/ob_expr_ai/ob_expr_ai_rerank.cpp",
+      "bytes": 20684,
+      "sha256": "181a425f059791e818d98388215264e7711d5d561713bdacd46371805ff65c7f",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "seekdb",
+      "commit": "76f871eb5a84b664d487b03b3412ce50194135b5",
+      "path": "tools/deploy/mysql_test/test_suite/ai_function/t/ai_prompt.test",
+      "url": "https://github.com/oceanbase/seekdb/blob/76f871eb5a84b664d487b03b3412ce50194135b5/tools/deploy/mysql_test/test_suite/ai_function/t/ai_prompt.test",
+      "bytes": 6752,
+      "sha256": "383fcd8b89e6129e78748ca4d654825aa6feff82fb1114e453562feeac4b81b8",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "seekdb",
+      "commit": "76f871eb5a84b664d487b03b3412ce50194135b5",
+      "path": "README.md",
+      "url": "https://github.com/oceanbase/seekdb/blob/76f871eb5a84b664d487b03b3412ce50194135b5/README.md",
+      "bytes": 16356,
+      "sha256": "9226941017677f8c4af3d6d446e5ebdb2dad2072f7920f8f87a361393f53d673",
+      "inspection": "read; not executed"
+    },
+    {
+      "repository": "seekdb",
+      "commit": "76f871eb5a84b664d487b03b3412ce50194135b5",
+      "path": "README_CN.md",
+      "url": "https://github.com/oceanbase/seekdb/blob/76f871eb5a84b664d487b03b3412ce50194135b5/README_CN.md",
+      "bytes": 16009,
+      "sha256": "e057ad510e5497e95b65eea4984da54288073a6baead1ae7ce5d650a2f698fd9",
+      "inspection": "read; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "benchmark/locomo/README.md",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/benchmark/locomo/README.md",
+      "bytes": 9299,
+      "sha256": "62c27f1978f3790ed213af596016387d34a96b1662b60e7963f9171b6d02e384",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "benchmark/memory_capacity/README.md",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/benchmark/memory_capacity/README.md",
+      "bytes": 4742,
+      "sha256": "8a3d5fbe0105849461091445d3989413c9639710f101d3bbe4ad9ecff1928ce3",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "docs/zh/rfcs/0028_context_pack.md",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/docs/zh/rfcs/0028_context_pack.md",
+      "bytes": 38807,
+      "sha256": "b4857c5486ec2e02e7c6420ff6685609f2c731179d34f023fdee137dbca65556",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "docs/zh/rfcs/0080_memory_search_reranking.md",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/docs/zh/rfcs/0080_memory_search_reranking.md",
+      "bytes": 9918,
+      "sha256": "e42f47f49c47ad1162e33a5ae6c03642a9a54a56efc663a2777999e7f0d3aa32",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "docs/zh/rfcs/1745-decision-model-rerank-seam.md",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/docs/zh/rfcs/1745-decision-model-rerank-seam.md",
+      "bytes": 22211,
+      "sha256": "544e3d7a3689d6c1479db83bb86f05657aeff7340f7bdd7e50d4a890984bab44",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "evaluation/README.md",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/evaluation/README.md",
+      "bytes": 32586,
+      "sha256": "1319167a019f885aea22605e7df8792f12a355ddb4706b556964a213f0ea15d6",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "src/powercontext/builtin/artifacts/handoff/service.py",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/src/powercontext/builtin/artifacts/handoff/service.py",
+      "bytes": 17309,
+      "sha256": "715cca520c26f2cc19aed4134ea5ce1fa0e016fb17c821097b877419d880f1df",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "src/powercontext/builtin/artifacts/memory/reranking.py",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/src/powercontext/builtin/artifacts/memory/reranking.py",
+      "bytes": 6320,
+      "sha256": "b0b1c7fd9013e60bf94bb853378ad417d89b56ef3bbf6aace47531a9a6018927",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "src/powercontext/builtin/artifacts/memory/service.py",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/src/powercontext/builtin/artifacts/memory/service.py",
+      "bytes": 79975,
+      "sha256": "5d4c890022760c3ec1d384d4552cc9a465efc4f344c491125ffd925f5e72e94f",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "src/powercontext/builtin/artifacts/search.py",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/src/powercontext/builtin/artifacts/search.py",
+      "bytes": 10839,
+      "sha256": "28444d6e610e547f7fb099c476ea46ba8790b4534941b15e844e6b955e579c70",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "src/powercontext/builtin/persistence/memory_index.py",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/src/powercontext/builtin/persistence/memory_index.py",
+      "bytes": 8460,
+      "sha256": "4eaa12dc2fc0f4b71ce4afe86b27342b2f517bb185a0ce52bca4760e8b1f5b5c",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "src/powercontext/builtin/scope/search.py",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/src/powercontext/builtin/scope/search.py",
+      "bytes": 1184,
+      "sha256": "116944cb7ccca1d24430cc78aa121e4337d42feaacacd819b21af730bf803514",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "src/powercontext/builtin/source_eligibility.py",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/src/powercontext/builtin/source_eligibility.py",
+      "bytes": 2097,
+      "sha256": "9ea22b663d70991b17f5c9b0b016dceb60ca29311338abbb9e5d37e5339376d0",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "tests/builtin/artifacts/handoff/test_service.py",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/tests/builtin/artifacts/handoff/test_service.py",
+      "bytes": 14964,
+      "sha256": "5349a78561cbbf8969c06e889552bd5e5d57e5bce85acdedbff711e1b4f2715d",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "tests/builtin/artifacts/memory/test_reranking.py",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/tests/builtin/artifacts/memory/test_reranking.py",
+      "bytes": 3148,
+      "sha256": "f50badb0b695aa194e8592b8fe6d69691abf166c35179591b10945d864548b21",
+      "inspection": "content read or targeted symbol/section inspection; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "README.md",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/README.md",
+      "bytes": 9838,
+      "sha256": "3570cf70e2628c58e74758afcddc1abd6f94fe6a7b3fcfca1c0966ccca29ad9c",
+      "inspection": "read; not executed"
+    },
+    {
+      "repository": "powercontext",
+      "commit": "9db1753434162c0aa7c9f1189a1722e617880a52",
+      "path": "README_CN.md",
+      "url": "https://github.com/oceanbase/powercontext/blob/9db1753434162c0aa7c9f1189a1722e617880a52/README_CN.md",
+      "bytes": 9338,
+      "sha256": "ddae69a2d67a4a438430e5c04191e81e9bf06365fad91d00432f96964898006c",
+      "inspection": "read; not executed"
+    }
+  ],
+  "official_web_observations": {
+    "competition_url": "https://open.oceanbase.com/competition?activityCode=4924143&officerId=5045",
+    "task_image_url": "https://mdn.alipayobjects.com/huamei_22khvb/afts/img/A*WY7oRLa9-iYAAAAAgCAAAAgAeiGDAQ/original",
+    "counts": {
+      "seekdb": 12,
+      "powercontext": 11,
+      "ecosystem": 7,
+      "total": 30,
+      "points": 620
+    },
+    "ecosystem_partners": [
+      "AMD",
+      "MiniMax",
+      "Qoder",
+      "StepFun",
+      "Dify",
+      "高德",
+      "ModelScope"
+    ],
+    "course_url": "https://open.oceanbase.com/course/850",
+    "public_course_items": 20,
+    "formal_individual_tasks_retrieved": false
+  }
+}
